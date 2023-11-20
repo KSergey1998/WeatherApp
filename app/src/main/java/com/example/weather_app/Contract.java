@@ -1,7 +1,10 @@
 package com.example.weather_app;
 
+import android.app.Activity;
+
 public interface Contract {
     interface Model {
+        void getLastLocation(Activity activity);
     }
 
     interface View {
@@ -10,7 +13,9 @@ public interface Contract {
     interface Presenter {
         void requestLocationPermission();
 
-        void handleLocationPermissionRequestResult(int requestCode, String[] permissions,
-                                                   int[] grantResults);
+        void handleLocationPermissionRequestResult(
+                int requestCode,
+                String[] permissions,
+                int[] grantResults);
     }
 }
