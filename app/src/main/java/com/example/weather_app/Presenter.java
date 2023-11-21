@@ -10,8 +10,7 @@ import androidx.core.app.ActivityCompat;
 
 public class Presenter implements Contract.Presenter {
     private static final int LOCATION_PERMISSION_REQUEST_CODE = 101;
-    private static final String[] LOCATION_PERMISSION = new String[]{
-            Manifest.permission.ACCESS_FINE_LOCATION};
+    private static final String LOCATION_PERMISSION = Manifest.permission.ACCESS_FINE_LOCATION;
 
     private final Contract.Model model;
     public final Contract.View view;
@@ -27,25 +26,18 @@ public class Presenter implements Contract.Presenter {
 
     @Override
     public void requestLocationPermission() {
-        if (ActivityCompat.shouldShowRequestPermissionRationale(activity,
-                Manifest.permission.ACCESS_FINE_LOCATION)) {
+        if (ActivityCompat.shouldShowRequestPermissionRationale(activity, LOCATION_PERMISSION)) {
             AlertDialog.Builder builder = new AlertDialog.Builder(context);
-            builder.setMessage(R.string.dialog_box_message);
-            builder.setPositiveButton(R.string.dialog_box_positive_btn, (dialogInterface, i) -> {
-                dialogInterface.dismiss();
-                ActivityCompat.requestPermissions(
-                        activity,
-                        LOCATION_PERMISSION,
-                        LOCATION_PERMISSION_REQUEST_CODE);
-            });
+            builder.setMessage(R.string.dialog_box_location_message);
+            builder.setPositiveButton(R.string.dialog_box_positive_btn, (dialogInterface, i) ->
+                    ActivityCompat.requestPermissions(activity, new String[]{LOCATION_PERMISSION},
+                            LOCATION_PERMISSION_REQUEST_CODE));
             builder.setNegativeButton(R.string.dialog_box_negative_btn, (dialogInterface, i) ->
                     dialogInterface.dismiss());
             AlertDialog dialog = builder.create();
             dialog.show();
         } else {
-            ActivityCompat.requestPermissions(
-                    activity,
-                    LOCATION_PERMISSION,
+            ActivityCompat.requestPermissions(activity, new String[]{LOCATION_PERMISSION},
                     LOCATION_PERMISSION_REQUEST_CODE);
         }
     }

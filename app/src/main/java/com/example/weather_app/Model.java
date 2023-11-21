@@ -8,7 +8,6 @@ import com.google.android.gms.location.FusedLocationProviderClient;
 import com.google.android.gms.location.LocationServices;
 
 public class Model implements Contract.Model {
-
     @SuppressLint("MissingPermission")
     @Override
     public void getLastLocation(Activity activity) {
