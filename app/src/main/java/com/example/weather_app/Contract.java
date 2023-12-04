@@ -1,13 +1,22 @@
 package com.example.weather_app;
 
-import android.app.Activity;
+import retrofit2.Callback;
 
 public interface Contract {
     interface Model {
-        void getLastLocation(Activity activity);
+        void getCurrentForecast(double latitude, double longitude, Callback<Forecast> callback);
+
+        void getHourlyForecast(double latitude, double longitude, Callback<Forecast> callback);
+
+        void getDailyForecast(double latitude, double longitude, Callback<Forecast> callback);
     }
 
     interface View {
+        void setCurrentForecast();
+
+        void setHourlyForecast();
+
+        void setDailyForecast();
     }
 
     interface Presenter {

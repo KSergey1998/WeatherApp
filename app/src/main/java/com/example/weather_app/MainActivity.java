@@ -17,6 +17,21 @@ public class MainActivity extends AppCompatActivity implements Contract.View {
     }
 
     @Override
+    public void setCurrentForecast() {
+
+    }
+
+    @Override
+    public void setHourlyForecast() {
+
+    }
+
+    @Override
+    public void setDailyForecast() {
+
+    }
+
+    @Override
     public void onRequestPermissionsResult(int requestCode, @NonNull String[] permissions,
                                            @NonNull int[] grantResults) {
         super.onRequestPermissionsResult(requestCode, permissions, grantResults);
