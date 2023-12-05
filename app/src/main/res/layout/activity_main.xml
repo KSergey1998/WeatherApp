@@ -6,13 +6,66 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
-    <TextView
+    <ImageView
+        android:id="@+id/weather_icon"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Hello World!"
-        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
+    <TextView
+        android:id="@+id/city_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/current_temperature"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/city_name" />
+
+    <ImageView
+        android:id="@+id/pressure_icon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/current_temperature" />
+
+    <TextView
+        android:id="@+id/current_pressure"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toEndOf="@id/pressure_icon"
+        app:layout_constraintTop_toTopOf="@id/pressure_icon" />
+
+    <ImageView
+        android:id="@+id/humidity_icon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toEndOf="@id/current_pressure"
+        app:layout_constraintTop_toTopOf="@id/current_pressure" />
+
+    <TextView
+        android:id="@+id/current_humidity"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toEndOf="@id/humidity_icon"
+        app:layout_constraintTop_toTopOf="@id/humidity_icon" />
+
+    <ImageView
+        android:id="@+id/wind_speed_icon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toEndOf="@id/current_humidity"
+        app:layout_constraintTop_toTopOf="@id/current_humidity" />
+
+    <TextView
+        android:id="@+id/current_wind_speed"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toEndOf="@id/wind_speed_icon"
+        app:layout_constraintTop_toTopOf="@id/wind_speed_icon" />
 </androidx.constraintlayout.widget.ConstraintLayout>
