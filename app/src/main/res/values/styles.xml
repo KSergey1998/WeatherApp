@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="TextViewLight">
+        <item name="android:textColor">@color/white</item>
+        <item name="android:textSize">16sp</item>
+    </style>
+
+    <style name="Wrapper">
+        <item name="android:layout_margin">@dimen/dimen_20</item>
+        <item name="android:background">@drawable/forecast_background</item>
+        <item name="layout_constraintHeight_percent">0.25</item>
+    </style>
+</resources>

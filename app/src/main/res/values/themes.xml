@@ -1,0 +1,20 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Base.Theme.SimpleWeatherApp" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- Customize your light theme here. -->
+        <!-- <item name="colorPrimary">@color/my_light_primary</item> -->
+        <item name="android:statusBarColor">@color/grey</item>
+        <item name="android:navigationBarColor">@color/grey</item>
+        <item name="android:colorEdgeEffect">@color/grey</item>
+    </style>
+
+    <style name="Theme.SimpleWeatherApp.RecyclerView">
+        <item name="android:fontFamily">sans-serif-light</item>
+    </style>
+
+    <style name="Theme.SimpleWeatherApp" parent="Base.Theme.SimpleWeatherApp" />
+
+    <style name="AlertDialog">
+        <item name="android:background">@color/black</item>
+    </style>
+</resources>

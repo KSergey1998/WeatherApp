@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">SimpleWeatherApp</string>
+    <string name="today_forecast_label">Today`s weather forecast</string>
+    <string name="weekly_forecast_label">Weekly weather forecast</string>
+    <string name="alert_dialog_positive_btn">Ok</string>
+    <string name="location_permission_explanation">To provide you with the most accurate and
+        personalized weather updates, <b>SimpleWeatherApp</b> requires access to your device`s
+        location. Knowing your location helps us deliver real-time weather forecasts tailored to
+        your specific area.</string>
+    <string name="permission_denied_message"><b>SimpleWeatherApp</b> is unable to provide accurate
+        weather information without access to your device`s location</string>
+</resources>
